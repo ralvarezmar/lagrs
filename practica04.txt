@@ -1,0 +1,206 @@
+4.1
+Me conecto por ssh a alpha02:
+
+rmartin@alpha:~$ cd /tmp
+rmartin@alpha:/tmp$ vim tictacrmartin
+
+creado el archivo en tmp, puedo lanzar screens para lanzar el script dentro de uno y dejarlo corriendo:
+rmartin@alpha:/tmp$ screen
+rmartin@alpha:/tmp$ bash tictacrmartin
+
+Abro una ventana de la sesi�n con ctrl a c
+rmartin@alpha:/tmp$ screen -d
+Para desasociarme de la sesi�n de screen. Acto seguido puedo hacer ctrl d para terminar la sesi�n de ssh
+
+Me reato a la sesion haciendo screen -r
+
+
+ctrl a A para cambiar el nombre de la ventana actual. Para cambiar el nombre a otra tengo que pulsar ctrl a " para cambiar a la deseada y, una vez hecho eso, repetir la operaci�n.
+
+Abro nueva sesi�n de screen y ejecuto en ella top. Me salgo de esta y cierro sesi�n ssh con ctrl d.
+
+Ahora al ejecutar screen -r me salen dos sesiones abiertas. Las cuales puedo reconocer por el nombre o la hora de creaci�n:
+
+rmartin@alpha:~$ screen -r
+There are several suitable screens on:
+        19741.pts-13.alpha      (08/12/18 18:16:33)     (Detached)
+        17407.pts-13.alpha      (08/12/18 18:08:57)     (Detached)
+
+
+La ultima creada es la que contiene top. Poniendo su id (19741.pts-13.alpha) puedo recuperarla. Poniendo el id de la otra sesi�n recupero reloj y control de memoria.
+
+Despu�s de cerrar todas las sesiones e intentar recuperar una aparece lo siguiente:
+
+rmartin@alpha:~$ screen -r
+There is no screen to be resumed.
+
+
+
+
+
+4.2 FHS
+En Junio de 2015 tenemos la siguiente pregunta:
+Ejercicio 2 (2.5 puntos)
+Supongamos que en nuestro sistema linux hemos montado el directorio raiz en /dev/sda1
+1.  Explica que significa esto
+  En ese directorio encontramos referencias a dispositivos. En este caso hace referencia a un disco duro o un ssd en el que estará montado el sistema linux.
+2.  Si ejecutamos ls /dev/sda1 no vemos los ficheros que contiene /.
+No vemos los ficheros que contiene porque son bloques de memoria en los que encontramos las direcciones de los dispositivos
+Si ejecutamos cd /dev/sda1 se produce un error¿Por que?
+No puedes acceder a un bloque de memoria con cd
+
+En diciembre de 2017:
+¿Cual es la diferencia entre los siguientes directorios, cual es su propósito?
+/lib
+/usr/lib
+/usr/local/lib
+
+/lib
+Contiene librerías esenciales para ejecutables del sistema.
+/usr/lib
+Contiene librerías para ejecutables de menor importancia, no esenciales.
+/usr/local/lib
+Contiene librerías de programas no incluidos de forma estándar en la distribución, sino programas que cada administrador local añade.
+
+4.3 Recode
+4.3.1
+rmartin@zeta16:~/lagrs/practica04$ atom ejemplo1.txt
+rmartin@zeta16:~/lagrs/practica04$ atom ejemplo2.txt
+rmartin@zeta16:~/lagrs/practica04$ atom ejemplo3.txt
+rmartin@zeta16:~/lagrs/practica04$ atom ejemplo3.txt
+rmartin@zeta16:~/lagrs/practica04$ file ejemplo1.txt
+4.3.2
+ejemplo1.txt: UTF-8 Unicode text, with very long lines
+rmartin@zeta16:~/lagrs/practica04$ file ejemplo2.txt
+ejemplo2.txt: UTF-8 Unicode text, with very long lines
+rmartin@zeta16:~/lagrs/practica04$ file ejemplo3.txt
+ejemplo3.txt: UTF-8 Unicode text, with very long lines
+4.3.3
+rmartin@zeta16:~/lagrs/practica04$ cp ejemplo1.txt ejemplo1.latin.txt
+rmartin@zeta16:~/lagrs/practica04$ recode utf-8..latin-1 ejemplo1.latin.txt
+rmartin@zeta16:~/lagrs/practica04$ file ejemplo1.latin.txt
+ejemplo1.latin.txt: ISO-8859 text, with very long lines
+
+rmartin@zeta16:~/lagrs/practica04$ cp ejemplo2.txt ejemplo2.windows1252.txt
+rmartin@zeta16:~/lagrs/practica04$ recode utf-8..windows-1252 ejemplo2.windows1252.txt
+rmartin@zeta16:~/lagrs/practica04$ file ejemplo2.windows1252.txt
+ejemplo2.windows1252.txt: Non-ISO extended-ASCII text, with very long lines
+
+
+rmartin@zeta16:~/lagrs/practica04$ recode utf-8..utf-16 ejemplo3.utf16.txt
+rmartin@zeta16:~/lagrs/practica04$ file ejemplo3.utf16.txt
+ejemplo3.utf16.txt: Big-endian UTF-16 Unicode text, with very long lines
+
+
+4.4. X11 Forwarding
+Para abrir la aplicación gráfica primero hay que modificar el fichero /etc/ssh/ssh_config
+Una vez hecho esto se lanza la siguiente instrucción:
+rmartin@alpha:~$ ssh -C -X rmartin@beta.aulas.gsyc.urjc.es
+
+Y abrimos navegador después de haber iniciado la sesión:
+rmartin@beta:~/lagrs$ google-chrome
+
+Desde este navegador entramos en https://miip.es/ y nos aparece que es 212.128.254.65
+Si entro en la misma página en el navegador de mi máquina local me aparece la ip 79.157.217.129
+
+El navegador de la sesión remota me está mostrando la ip de la máquina remota, el de la máquina local muestra mi ip.
+
+4.5. VNC
+rmartin@alpha29:~/lagrs$ openbox-session
+
+No se ha encontrado la orden «openbox-session», pero se puede instalar con:
+
+apt install openbox
+Pregunte al administrador.
+
+rmartin@alpha29:~/lagrs$ xfce4-session
+Gtk-Message: 19:22:38.423: Failed to load module "canberra-gtk-module"
+xfce4-session: Another session manager is already running
+
+
+Modificamos el archivo creado en $HOME/.vnc/xtartup y otorgamos permisos:
+
+#!/bin/bash
+xrdb ~/.Xresources
+startxfce4&
+xterm&
+
+Añadimos xterm al final del fichero para que abra una consola cuando se conecte por vnc. Si no, no aparece nada en pantalla.
+
+
+rmartin@alpha:~$ chmod 755 $HOME/.vnc/xstartup
+
+Después de hacer ssh a un equipo virtual de los laboratorios:
+vncserver -geometry 1024x768 -depth 16
+
+Nos pedirá una contraseña: 23bake91
+
+New 'X' desktop is alpha:12
+
+Starting applications specified in /home/alumnos/rmartin/.vnc/xstartup
+Log file is /home/alumnos/rmartin/.vnc/alpha:12.log
+
+
+En local ejecutamos:
+rmartin@alpha29:~/.vnc$ vinagre alpha:5912
+
+Si ejecuto xeyes, xcalc...me abre todas las aplicaciones en el escritorio remoto.
+
+Si ejecuto ps desde el ssh solo me sale el proceso bash que esta activo:
+ rmartin@alpha:~$ ps
+  PID TTY          TIME CMD
+ 7419 pts/6    00:00:00 bash
+ 7433 pts/6    00:00:00 ps
+
+ Solo salen esos procesos porque es diferente sesión la establecida por ssh que por vnc
+
+Si utilizo netstat aparecen todas las conexiones que están activas en alpha, incluidas las de ssh y vnc:
+rmartin@alpha:~$ netstat | grep alpha29
+tcp        0      0 alpha.aulas.gsyc.u:5912 alpha29.aulas.gsy:57430 ESTABLECIDO
+tcp        0      0 alpha.aulas.gsyc.ur:ssh alpha29.aulas.gsy:49310 ESTABLECIDO
+
+4.6.
+rmartin@zeta16:~/lagrs/pc02/$ vagrant up
+rmartin@zeta16:~/lagrs/pc02/$ vagrant ssh
+Para copiar romanserver y romanserver en la máquina es suficiente con meterlos en la carpeta ~/lagrs/pc02, a la cual tengo acceso desde mi máquina.
+Para lanzar el script y poder hacer ssh desde ahí hago screen. En una ejecuto el script y en terminal el ssh.
+
+vagrant@pc02:/vagrant$ ssh -R 9000:localhost:8000 rmartin@alpha03.aulas.gsyc.urjc.es
+
+Para abrir puertos con túnel inverso.
+
+vagrant@pc02:/vagrant$ ./romanserver.py tcp 8000
+
+Desde la máquina ahora puedo hacer:
+rmartin@alpha03:~$./romanclient.py localhost tcp 9000 4
+IV
+
+En el servidor aparece lo siguiente:
+Connected by ('127.0.0.1', 47608)
+4
+
+Si hago netstat -tupan desde la máquina de Vagrant(servidor) aparece lo siguiente:
+
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:8000            0.0.0.0:*               LISTEN      2192/python
+tcp        0      0 10.0.2.15:45782         212.128.254.131:22      ESTABLISHED 2221/ssh
+tcp        0    132 10.0.2.15:22            10.0.2.2:52846          ESTABLISHED -
+tcp        0      0 127.0.0.1:8000          127.0.0.1:47608         CLOSE_WAIT  2192/python
+tcp        0      0 127.0.0.1:47608         127.0.0.1:8000          FIN_WAIT2   2221/ssh
+tcp6       0      0 :::22                   :::*                    LISTEN      -
+udp     9984      0 127.0.0.53:53           0.0.0.0:*                           -
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           -
+udp     4352      0 10.0.2.15:68            0.0.0.0:*                           -
+
+Aparece la conexión 8000 ssh entrante:
+tcp        0      0 127.0.0.1:47608         127.0.0.1:8000          FIN_WAIT2   2221/ssh
+tcp        0      0 0.0.0.0:8000            0.0.0.0:*               LISTEN      2192/python
+
+
+Si lo ejecuto desde mi máquina alpha03 (cliente):
+Aparece el puerto que está en escucha entre muchas conexiones:
+tcp        0      0 127.0.0.1:9000          0.0.0.0:*               ESCUCHAR    -
+tcp        0      0 127.0.0.1:9000          127.0.0.1:44366         CLOSE_WAIT  -

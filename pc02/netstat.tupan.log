@@ -1,0 +1,13 @@
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:8000            0.0.0.0:*               LISTEN      2192/python         
+tcp        0      0 10.0.2.15:45782         212.128.254.131:22      ESTABLISHED 2221/ssh            
+tcp        0    132 10.0.2.15:22            10.0.2.2:52846          ESTABLISHED -                   
+tcp        0      0 127.0.0.1:8000          127.0.0.1:47608         CLOSE_WAIT  2192/python         
+tcp        0      0 127.0.0.1:47608         127.0.0.1:8000          FIN_WAIT2   2221/ssh            
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+udp     9984      0 127.0.0.53:53           0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           -                   
+udp     4352      0 10.0.2.15:68            0.0.0.0:*                           -                   

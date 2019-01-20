@@ -1,0 +1,492 @@
+Conexiones activas de Internet (servidores w/o)
+Proto  Recib Enviad Dirección local         Dirección remota       Estado      
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:56352 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:51850 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:43472 TIME_WAIT  
+tcp        0      0 alpha03.aulas.gsy:55214 ldap1.aulas.gsyc.u:ldap ESTABLECIDO
+tcp        0      0 localhost.localdo:34371 localhost.localdo:52560 ESTABLECIDO
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:50212 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:56454 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:43892 TIME_WAIT  
+tcp        0      0 alpha03.aulas.gsyc.:ssh zeta16.aulas.gsyc:58976 ESTABLECIDO
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:45358 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:56048 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:42006 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:55052 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:60350 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:53794 TIME_WAIT  
+tcp        0      0 alpha03.aulas.gsy:55216 ldap1.aulas.gsyc.u:ldap ESTABLECIDO
+tcp        0      0 alpha03.aulas.gsyc.:821 nfsserver1.aulas.gs:nfs ESTABLECIDO
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:52736 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:41588 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:49774 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:44852 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:50834 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:45900 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:44632 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:50604 TIME_WAIT  
+tcp        0      0 localhost.localdo:52560 localhost.localdo:34371 ESTABLECIDO
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:54070 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:54562 TIME_WAIT  
+tcp        0      0 alpha03.aulas.gsy:33110 graylog2.aulas.gsy:1515 ESTABLECIDO
+tcp        0      0 alpha03.aulas.gsy:55212 ldap1.aulas.gsyc.u:ldap ESTABLECIDO
+tcp        0      0 localhost.localdom:9000 localhost.localdo:44366 CLOSE_WAIT 
+tcp        0      0 alpha03.aulas.gsy:55218 ldap1.aulas.gsyc.u:ldap ESTABLECIDO
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:57122 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:46438 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:53528 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:42554 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:51384 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:52438 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:48798 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:45036 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:47412 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:49528 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:47256 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:49614 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:54416 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:47686 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:49810 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:42186 TIME_WAIT  
+tcp        0      0 alpha03.au:zabbix-agent zabbix.aulas.gsyc:42898 TIME_WAIT  
+tcp        0      0 alpha03.aulas.gsy:55206 ldap1.aulas.gsyc.u:ldap ESTABLECIDO
+Activar zócalos de dominio UNIX (servidores w/o)
+Proto RefCnt Flags       Type       State         I-Node   Ruta
+unix  2      [ ]         DGRAM                    2165344  /run/user/9125/systemd/notify
+unix  2      [ ]         DGRAM                    46793    /run/user/121/systemd/notify
+unix  3      [ ]         DGRAM                    15612    /run/systemd/notify
+unix  26     [ ]         DGRAM                    15629    /run/systemd/journal/dev-log
+unix  2      [ ]         DGRAM                    15631    /run/systemd/journal/syslog
+unix  10     [ ]         DGRAM                    15644    /run/systemd/journal/socket
+unix  3      [ ]         FLUJO      CONECTADO     76245    
+unix  3      [ ]         FLUJO      CONECTADO     31890    
+unix  3      [ ]         FLUJO      CONECTADO     76297    
+unix  3      [ ]         FLUJO      CONECTADO     21089    
+unix  3      [ ]         FLUJO      CONECTADO     1722153  
+unix  3      [ ]         FLUJO      CONECTADO     72285    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    50036    
+unix  3      [ ]         FLUJO      CONECTADO     48988    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     27694    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     24865    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74142    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     51276    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     45293    @/tmp/dbus-j5162cXK
+unix  3      [ ]         FLUJO      CONECTADO     25807    
+unix  3      [ ]         FLUJO      CONECTADO     49191    
+unix  3      [ ]         FLUJO      CONECTADO     21440    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    1213772  
+unix  3      [ ]         FLUJO      CONECTADO     74431    
+unix  3      [ ]         FLUJO      CONECTADO     75956    
+unix  3      [ ]         FLUJO      CONECTADO     52581    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     27020    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76442    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     46645    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     44691    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     22349    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74487    @/tmp/dbus-y90DKDN2D3
+unix  3      [ ]         FLUJO      CONECTADO     72595    
+unix  3      [ ]         FLUJO      CONECTADO     46120    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     29123    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     24292    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     76316    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     75007    @/tmp/dbus-y90DKDN2D3
+unix  3      [ ]         FLUJO      CONECTADO     26767    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     49106    @/tmp/dbus-y90DKDN2D3
+unix  3      [ ]         FLUJO      CONECTADO     33230    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74281    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76133    
+unix  3      [ ]         DGRAM                    21028    
+unix  3      [ ]         FLUJO      CONECTADO     1282079  
+unix  3      [ ]         FLUJO      CONECTADO     72287    @/tmp/.X11-unix/X0
+unix  3      [ ]         FLUJO      CONECTADO     49894    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    29459    
+unix  2      [ ]         FLUJO      CONECTADO     1147678  @/tmp/dbus-hjMer8uX
+unix  3      [ ]         FLUJO      CONECTADO     74241    
+unix  3      [ ]         FLUJO      CONECTADO     74069    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     24706    
+unix  3      [ ]         FLUJO      CONECTADO     27936    
+unix  3      [ ]         FLUJO      CONECTADO     76298    
+unix  3      [ ]         FLUJO      CONECTADO     32649    
+unix  3      [ ]         FLUJO      CONECTADO     79542    
+unix  3      [ ]         FLUJO      CONECTADO     74278    
+unix  3      [ ]         FLUJO      CONECTADO     71603    @/tmp/dbus-y90DKDN2D3
+unix  2      [ ]         DGRAM                    48983    
+unix  3      [ ]         FLUJO      CONECTADO     26255    
+unix  3      [ ]         FLUJO      CONECTADO     75204    @/tmp/dbus-y90DKDN2D3
+unix  3      [ ]         FLUJO      CONECTADO     1721187  /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     75118    
+unix  3      [ ]         FLUJO      CONECTADO     50031    
+unix  3      [ ]         FLUJO      CONECTADO     30338    
+unix  3      [ ]         FLUJO      CONECTADO     1721176  /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     74486    
+unix  3      [ ]         FLUJO      CONECTADO     71599    
+unix  3      [ ]         FLUJO      CONECTADO     31454    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    15613    
+unix  2      [ ]         FLUJO      CONECTADO     1722112  
+unix  2      [ ]         FLUJO      CONECTADO     95523    @/tmp/dbus-hjMer8uX
+unix  3      [ ]         FLUJO      CONECTADO     51786    
+unix  3      [ ]         FLUJO      CONECTADO     73635    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74844    /run/user/121/pulse/native
+unix  3      [ ]         FLUJO      CONECTADO     24293    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     50436    
+unix  2      [ ]         DGRAM                    1282080  
+unix  3      [ ]         FLUJO      CONECTADO     76197    
+unix  3      [ ]         FLUJO      CONECTADO     76291    
+unix  2      [ ]         FLUJO      CONECTADO     1264213  @/tmp/dbus-hjMer8uX
+unix  3      [ ]         FLUJO      CONECTADO     50027    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     73372    
+unix  3      [ ]         FLUJO      CONECTADO     51841    @/tmp/dbus-y90DKDN2D3
+unix  2      [ ]         DGRAM                    37952    
+unix  3      [ ]         FLUJO      CONECTADO     24194    
+unix  3      [ ]         FLUJO      CONECTADO     600      /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     49654    
+unix  3      [ ]         FLUJO      CONECTADO     49116    
+unix  3      [ ]         FLUJO      CONECTADO     48565    
+unix  3      [ ]         FLUJO      CONECTADO     76443    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     72286    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     75143    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    74017    
+unix  3      [ ]         FLUJO      CONECTADO     45884    /var/run/docker/containerd/docker-containerd.sock
+unix  3      [ ]         FLUJO      CONECTADO     32435    
+unix  3      [ ]         FLUJO      CONECTADO     45184    
+unix  3      [ ]         FLUJO      CONECTADO     25495    
+unix  3      [ ]         FLUJO      CONECTADO     76987    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76242    
+unix  3      [ ]         FLUJO      CONECTADO     24947    
+unix  3      [ ]         FLUJO      CONECTADO     36450    
+unix  3      [ ]         FLUJO      CONECTADO     76439    
+unix  3      [ ]         FLUJO      CONECTADO     43871    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    37928    
+unix  3      [ ]         FLUJO      CONECTADO     76988    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     73691    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     71602    
+unix  3      [ ]         FLUJO      CONECTADO     48985    
+unix  3      [ ]         FLUJO      CONECTADO     27692    
+unix  3      [ ]         FLUJO      CONECTADO     50439    
+unix  3      [ ]         FLUJO      CONECTADO     1281209  /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     75113    
+unix  3      [ ]         FLUJO      CONECTADO     26919    
+unix  3      [ ]         FLUJO      CONECTADO     75287    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76289    
+unix  2      [ ]         DGRAM                    48984    
+unix  3      [ ]         FLUJO      CONECTADO     42785    
+unix  3      [ ]         FLUJO      CONECTADO     24030    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     49107    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     1719934  /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     50029    
+unix  3      [ ]         FLUJO      CONECTADO     25282    
+unix  3      [ ]         FLUJO      CONECTADO     73895    
+unix  3      [ ]         FLUJO      CONECTADO     71604    
+unix  3      [ ]         FLUJO      CONECTADO     48986    
+unix  3      [ ]         FLUJO      CONECTADO     27032    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     50381    
+unix  3      [ ]         FLUJO      CONECTADO     1719933  /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     42782    
+unix  3      [ ]         DGRAM                    23629    
+unix  3      [ ]         FLUJO      CONECTADO     74179    
+unix  3      [ ]         FLUJO      CONECTADO     22306    
+unix  3      [ ]         FLUJO      CONECTADO     76310    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     76292    @/tmp/dbus-y90DKDN2D3
+unix  3      [ ]         FLUJO      CONECTADO     50062    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     24593    
+unix  3      [ ]         FLUJO      CONECTADO     74280    
+unix  3      [ ]         FLUJO      CONECTADO     25526    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    27767    
+unix  3      [ ]         FLUJO      CONECTADO     76309    
+unix  3      [ ]         FLUJO      CONECTADO     32572    
+unix  3      [ ]         FLUJO      CONECTADO     49653    
+unix  3      [ ]         FLUJO      CONECTADO     45205    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     32001    
+unix  3      [ ]         DGRAM                    23630    
+unix  3      [ ]         FLUJO      CONECTADO     74450    
+unix  3      [ ]         FLUJO      CONECTADO     73987    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    74896    
+unix  3      [ ]         FLUJO      CONECTADO     50433    
+unix  3      [ ]         FLUJO      CONECTADO     75288    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76233    
+unix  3      [ ]         FLUJO      CONECTADO     24295    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76296    
+unix  3      [ ]         FLUJO      CONECTADO     1722103  
+unix  3      [ ]         FLUJO      CONECTADO     51291    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     75140    @/tmp/.X11-unix/X0
+unix  3      [ ]         FLUJO      CONECTADO     73988    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     27768    
+unix  2      [ ]         DGRAM                    29511    
+unix  3      [ ]         FLUJO      CONECTADO     50434    
+unix  3      [ ]         FLUJO      CONECTADO     34346    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    1276044  
+unix  3      [ ]         FLUJO      CONECTADO     73374    
+unix  3      [ ]         FLUJO      CONECTADO     49192    
+unix  2      [ ]         FLUJO      CONECTADO     1263534  @/tmp/dbus-hjMer8uX
+unix  3      [ ]         FLUJO      CONECTADO     74279    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     72594    
+unix  3      [ ]         FLUJO      CONECTADO     71595    
+unix  3      [ ]         FLUJO      CONECTADO     75188    @/tmp/dbus-y90DKDN2D3
+unix  3      [ ]         FLUJO      CONECTADO     21430    
+unix  3      [ ]         FLUJO      CONECTADO     50681    
+unix  3      [ ]         DGRAM                    21029    
+unix  3      [ ]         FLUJO      CONECTADO     25297    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74430    
+unix  3      [ ]         FLUJO      CONECTADO     76196    
+unix  2      [ ]         DGRAM                    47520    
+unix  3      [ ]         FLUJO      CONECTADO     51292    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76299    @/tmp/dbus-y90DKDN2D3
+unix  3      [ ]         FLUJO      CONECTADO     71605    @/tmp/dbus-HRl56Ixo
+unix  3      [ ]         FLUJO      CONECTADO     71598    @/tmp/dbus-HRl56Ixo
+unix  3      [ ]         FLUJO      CONECTADO     42786    
+unix  2      [ ]         DGRAM                    37122    
+unix  3      [ ]         DGRAM                    15614    
+unix  3      [ ]         FLUJO      CONECTADO     49630    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     1562942  @/tmp/dbus-bJHiTto0
+unix  3      [ ]         FLUJO      CONECTADO     42781    
+unix  3      [ ]         DGRAM                    23632    
+unix  3      [ ]         FLUJO      CONECTADO     28546    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76438    
+unix  3      [ ]         FLUJO      CONECTADO     32581    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     21909    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     1719991  
+unix  3      [ ]         FLUJO      CONECTADO     1721948  
+unix  3      [ ]         FLUJO      CONECTADO     29624    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74240    
+unix  3      [ ]         FLUJO      CONECTADO     76234    
+unix  3      [ ]         FLUJO      CONECTADO     47506    
+unix  3      [ ]         FLUJO      CONECTADO     25490    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     49018    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     1561895  
+unix  3      [ ]         FLUJO      CONECTADO     47888    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     76134    
+unix  3      [ ]         FLUJO      CONECTADO     26172    
+unix  3      [ ]         FLUJO      CONECTADO     73379    
+unix  2      [ ]         FLUJO      CONECTADO     1719989  
+unix  3      [ ]         FLUJO      CONECTADO     76998    /run/user/121/bus
+unix  2      [ ]         DGRAM                    29114    
+unix  3      [ ]         FLUJO      CONECTADO     71600    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     70579    
+unix  3      [ ]         FLUJO      CONECTADO     72297    @/tmp/dbus-HRl56Ixo
+unix  2      [ ]         DGRAM                    42749    
+unix  3      [ ]         DGRAM                    23631    
+unix  2      [ ]         DGRAM                    16629    
+unix  3      [ ]         FLUJO      CONECTADO     76924    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     24333    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76315    
+unix  3      [ ]         DGRAM                    50035    
+unix  3      [ ]         FLUJO      CONECTADO     42717    
+unix  3      [ ]         FLUJO      CONECTADO     16616    
+unix  2      [ ]         DGRAM                    2164520  
+unix  3      [ ]         FLUJO      CONECTADO     76453    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     73353    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     33725    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     75205    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     1721196  /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     78403    @/tmp/dbus-HRl56Ixo
+unix  3      [ ]         FLUJO      CONECTADO     52106    
+unix  3      [ ]         FLUJO      CONECTADO     50720    @/tmp/.X11-unix/X0
+unix  3      [ ]         FLUJO      CONECTADO     44690    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     29525    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     76925    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     75804    
+unix  3      [ ]         FLUJO      CONECTADO     24850    
+unix  3      [ ]         FLUJO      CONECTADO     28478    
+unix  3      [ ]         FLUJO      CONECTADO     50435    @/tmp/.X11-unix/X0
+unix  3      [ ]         FLUJO      CONECTADO     74212    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     73373    
+unix  3      [ ]         FLUJO      CONECTADO     49893    
+unix  3      [ ]         FLUJO      CONECTADO     49193    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     35751    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     33388    
+unix  3      [ ]         FLUJO      CONECTADO     75332    @/tmp/.X11-unix/X0
+unix  3      [ ]         FLUJO      CONECTADO     75041    
+unix  3      [ ]         FLUJO      CONECTADO     76200    @/tmp/dbus-HRl56Ixo
+unix  3      [ ]         FLUJO      CONECTADO     74213    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     48438    
+unix  3      [ ]         FLUJO      CONECTADO     76956    
+unix  3      [ ]         FLUJO      CONECTADO     76902    
+unix  3      [ ]         FLUJO      CONECTADO     27667    
+unix  2      [ ]         FLUJO      CONECTADO     1328051  @/tmp/dbus-V2H0xkOv
+unix  3      [ ]         FLUJO      CONECTADO     24289    
+unix  3      [ ]         FLUJO      CONECTADO     75190    
+unix  3      [ ]         FLUJO      CONECTADO     76872    
+unix  2      [ ]         DGRAM                    27664    
+unix  3      [ ]         FLUJO      CONECTADO     1280720  /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76238    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     74144    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74068    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     2167103  /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    80973    
+unix  3      [ ]         FLUJO      CONECTADO     77070    
+unix  3      [ ]         FLUJO      CONECTADO     75065    
+unix  3      [ ]         FLUJO      CONECTADO     76842    
+unix  3      [ ]         FLUJO      CONECTADO     47681    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    23627    
+unix  3      [ ]         FLUJO      CONECTADO     75334    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     33218    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74169    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76107    @/tmp/dbus-y90DKDN2D3
+unix  3      [ ]         FLUJO      CONECTADO     49484    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    48451    
+unix  3      [ ]         FLUJO      CONECTADO     37903    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     77020    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74202    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76899    
+unix  3      [ ]         FLUJO      CONECTADO     26396    /var/run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    2165345  
+unix  3      [ ]         FLUJO      CONECTADO     48987    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     75327    
+unix  3      [ ]         DGRAM                    46795    
+unix  3      [ ]         FLUJO      CONECTADO     74296    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     76914    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     51272    
+unix  3      [ ]         FLUJO      CONECTADO     28648    
+unix  2      [ ]         FLUJO      CONECTADO     1484158  @/tmp/dbus-V2H0xkOv
+unix  3      [ ]         FLUJO      CONECTADO     51669    
+unix  3      [ ]         FLUJO      CONECTADO     75328    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    2062971  
+unix  3      [ ]         FLUJO      CONECTADO     77019    
+unix  3      [ ]         FLUJO      CONECTADO     74043    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     76108    /run/user/121/bus
+unix  2      [ ]         FLUJO      CONECTADO     1149025  @/tmp/dbus-hjMer8uX
+unix  3      [ ]         FLUJO      CONECTADO     75191    /run/user/121/bus
+unix  2      [ ]         DGRAM                    35818    
+unix  3      [ ]         FLUJO      CONECTADO     21104    /run/systemd/journal/stdout
+unix  2      [ ]         FLUJO      CONECTADO     1482211  @/tmp/dbus-V2H0xkOv
+unix  3      [ ]         FLUJO      CONECTADO     74180    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76898    
+unix  3      [ ]         FLUJO      CONECTADO     51882    
+unix  2      [ ]         DGRAM                    26297    
+unix  3      [ ]         FLUJO      CONECTADO     76406    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     22956    
+unix  3      [ ]         FLUJO      CONECTADO     2063506  /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     77018    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     75092    
+unix  3      [ ]         FLUJO      CONECTADO     74904    @/tmp/.ICE-unix/3426
+unix  3      [ ]         FLUJO      CONECTADO     51845    
+unix  3      [ ]         FLUJO      CONECTADO     51256    
+unix  3      [ ]         DGRAM                    2165346  
+unix  3      [ ]         FLUJO      CONECTADO     2167170  
+unix  2      [ ]         FLUJO      CONECTADO     1479265  @/tmp/dbus-V2H0xkOv
+unix  3      [ ]         FLUJO      CONECTADO     76465    
+unix  3      [ ]         FLUJO      CONECTADO     36602    
+unix  3      [ ]         FLUJO      CONECTADO     28555    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76978    
+unix  3      [ ]         FLUJO      CONECTADO     75069    
+unix  2      [ ]         DGRAM                    24445    
+unix  3      [ ]         FLUJO      CONECTADO     75333    
+unix  3      [ ]         FLUJO      CONECTADO     2062977  
+unix  3      [ ]         FLUJO      CONECTADO     77178    
+unix  3      [ ]         FLUJO      CONECTADO     76913    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76841    
+unix  3      [ ]         FLUJO      CONECTADO     2165320  
+unix  3      [ ]         FLUJO      CONECTADO     75121    
+unix  3      [ ]         FLUJO      CONECTADO     76955    
+unix  3      [ ]         FLUJO      CONECTADO     75040    
+unix  3      [ ]         FLUJO      CONECTADO     72298    
+unix  3      [ ]         FLUJO      CONECTADO     52004    
+unix  2      [ ]         DGRAM                    24513    
+unix  2      [ ]         FLUJO      CONECTADO     1265175  @/tmp/dbus-hjMer8uX
+unix  3      [ ]         FLUJO      CONECTADO     46616    /var/run/docker/containerd/docker-containerd.sock
+unix  3      [ ]         FLUJO      CONECTADO     46103    
+unix  3      [ ]         FLUJO      CONECTADO     77203    
+unix  3      [ ]         FLUJO      CONECTADO     74170    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     73707    
+unix  3      [ ]         FLUJO      CONECTADO     45969    
+unix  3      [ ]         FLUJO      CONECTADO     30259    /var/run/dbus/system_bus_socket
+unix  2      [ ]         FLUJO      CONECTADO     1483016  @/tmp/dbus-V2H0xkOv
+unix  3      [ ]         FLUJO      CONECTADO     33849    
+unix  3      [ ]         FLUJO      CONECTADO     1281189  
+unix  3      [ ]         FLUJO      CONECTADO     76877    @/tmp/.X11-unix/X0
+unix  3      [ ]         FLUJO      CONECTADO     77849    
+unix  3      [ ]         FLUJO      CONECTADO     32582    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76984    
+unix  3      [ ]         FLUJO      CONECTADO     74979    @/tmp/.X11-unix/X0
+unix  3      [ ]         FLUJO      CONECTADO     51273    
+unix  2      [ ]         DGRAM                    24237    
+unix  3      [ ]         FLUJO      CONECTADO     2057787  
+unix  3      [ ]         FLUJO      CONECTADO     51670    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     52421    
+unix  2      [ ]         DGRAM                    78041    
+unix  3      [ ]         FLUJO      CONECTADO     48426    
+unix  3      [ ]         FLUJO      CONECTADO     75141    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    76910    
+unix  3      [ ]         FLUJO      CONECTADO     27666    
+unix  2      [ ]         DGRAM                    15714    
+unix  3      [ ]         FLUJO      CONECTADO     47634    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     75503    
+unix  3      [ ]         FLUJO      CONECTADO     75006    
+unix  3      [ ]         FLUJO      CONECTADO     76160    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     52126    /run/user/121/pulse/native
+unix  3      [ ]         FLUJO      CONECTADO     27673    
+unix  3      [ ]         FLUJO      CONECTADO     2062043  /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     75189    
+unix  3      [ ]         DGRAM                    46794    
+unix  3      [ ]         FLUJO      CONECTADO     33203    
+unix  3      [ ]         FLUJO      CONECTADO     77017    
+unix  3      [ ]         FLUJO      CONECTADO     75091    
+unix  2      [ ]         DGRAM                    24215    
+unix  3      [ ]         FLUJO      CONECTADO     29473    
+unix  3      [ ]         FLUJO      CONECTADO     75324    
+unix  3      [ ]         FLUJO      CONECTADO     73624    
+unix  3      [ ]         FLUJO      CONECTADO     50037    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     47885    
+unix  3      [ ]         FLUJO      CONECTADO     28206    /var/run/openvswitch/db.sock
+unix  3      [ ]         DGRAM                    726      
+unix  3      [ ]         FLUJO      CONECTADO     75044    
+unix  3      [ ]         FLUJO      CONECTADO     76210    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     74133    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     47633    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     47850    
+unix  2      [ ]         DGRAM                    44894    
+unix  3      [ ]         FLUJO      CONECTADO     75064    
+unix  3      [ ]         FLUJO      CONECTADO     76161    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     45942    
+unix  2      [ ]         DGRAM                    33424    
+unix  3      [ ]         FLUJO      CONECTADO     74200    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     74181    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74132    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    2165322  
+unix  2      [ ]         DGRAM                    24218    
+unix  3      [ ]         FLUJO      CONECTADO     77537    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     77033    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     77204    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     74145    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     76178    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     76290    /run/user/121/bus
+unix  2      [ ]         DGRAM                    77176    
+unix  3      [ ]         FLUJO      CONECTADO     75072    
+unix  3      [ ]         FLUJO      CONECTADO     72299    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     50423    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     45943    
+unix  3      [ ]         FLUJO      CONECTADO     75114    
+unix  3      [ ]         FLUJO      CONECTADO     49909    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     75504    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     35750    
+unix  3      [ ]         FLUJO      CONECTADO     76935    
+unix  3      [ ]         FLUJO      CONECTADO     76912    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     73704    
+unix  2      [ ]         DGRAM                    2165160  
+unix  2      [ ]         DGRAM                    24288    
+unix  3      [ ]         FLUJO      CONECTADO     2167171  
+unix  2      [ ]         DGRAM                    16406    
+unix  3      [ ]         DGRAM                    725      
+unix  3      [ ]         FLUJO      CONECTADO     75120    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     76979    
+unix  3      [ ]         FLUJO      CONECTADO     50723    /run/systemd/journal/stdout
+unix  2      [ ]         FLUJO      CONECTADO     79958    @/tmp/dbus-hjMer8uX
+unix  3      [ ]         FLUJO      CONECTADO     75142    @/tmp/.X11-unix/X0
+unix  3      [ ]         FLUJO      CONECTADO     74201    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     73706    
+unix  3      [ ]         FLUJO      CONECTADO     51259    
+unix  3      [ ]         FLUJO      CONECTADO     34086    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     76466    /run/user/121/pulse/native
+unix  3      [ ]         FLUJO      CONECTADO     31136    
+unix  3      [ ]         FLUJO      CONECTADO     75305    
+unix  3      [ ]         FLUJO      CONECTADO     46656    /var/run/docker/containerd/docker-containerd.sock
+unix  3      [ ]         FLUJO      CONECTADO     74190    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     75005    
+unix  3      [ ]         FLUJO      CONECTADO     24290    
+unix  3      [ ]         FLUJO      CONECTADO     1721175  
+unix  3      [ ]         FLUJO      CONECTADO     74444    /run/user/121/bus
+unix  3      [ ]         FLUJO      CONECTADO     74191    /run/systemd/journal/stdout
+unix  3      [ ]         FLUJO      CONECTADO     74981    
+unix  3      [ ]         FLUJO      CONECTADO     44676    /var/run/dbus/system_bus_socket
+unix  3      [ ]         FLUJO      CONECTADO     76911    
+unix  3      [ ]         FLUJO      CONECTADO     76871    

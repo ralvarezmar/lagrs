@@ -1,0 +1,2 @@
+echo -n "probando cron    " >> $HOME/lagrs/log.txt
+date >> $HOME/lagrs/log.txt

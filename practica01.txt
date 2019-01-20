@@ -1,0 +1,377 @@
+Rubén Álvarez Martín rmartin
+26.09.2018
+Uso mcedit porque lo he usado para otras asignaturas y me resulta más sencillo su uso
+
+1.4:
+Para instalar docker realizo los siguientes comandos en la terminal:
+
+wget https://get.docker.com -O get-docker.sh
+
+bash get-docker.sh
+
+Después añadimos nuestro usuario al grupo docker:
+
+adduser rmartin docker
+
+
+Para la prueba en debian: rmartin@alpha:~$ sudo docker run debian echo "holamundo"
+Unable to find image 'debian:latest' locally
+latest: Pulling from library/debian
+0bd44ff9c2cf: Pull complete
+Digest: sha256:6ee341d1cf3da8e6ea059f8bc3af9940613c4287205cd71d7c6f9e1718fdcb9b
+Status: Downloaded newer image for debian:latest
+holamundo
+
+Y en ubuntu: sudo docker run ubuntu echo "holamundo"
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+6b98dfc16071: Pull complete
+4001a1209541: Pull complete
+6319fc68c576: Pull complete
+b24603670dc3: Pull complete
+97f170c87c6f: Pull complete
+Digest: sha256:5f4bdc3467537cbbe563e80db2c3ec95d548a9145d64453b06939c4592d67b6d
+Status: Downloaded newer image for ubuntu:latest
+holamundo
+
+
+rmartin@alpha:~$ docker run -it ubuntu
+root@1da42e01267c:/#
+
+
+rmartin@alpha:~$ docker run -it --name c01 ubuntu
+root@39b0f3f28c12:/#
+
+rmartin@alpha:~$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+39b0f3f28c12        ubuntu              "/bin/bash"         2 minutes ago       Up 2 minutes                            c01
+1da42e01267c        ubuntu              "/bin/bash"         3 minutes ago       Up 3 minutes                            romantic_easley
+rmartin@alpha:~$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+debian              latest              9a5d7185d3a6        2 weeks ago         101MB
+ubuntu              latest              113a43faa138        5 weeks ago         81.2MB
+
+Aparecen los dos contenedores que están en ejecución al hacer docker ps y al ver las imágenes aparecen las creadas anteriormente pero que no están en ejecución.
+
+Después de hacer exit en ambos:
+rmartin@alpha:~$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+debian              latest              9a5d7185d3a6        2 weeks ago         101MB
+ubuntu              latest              113a43faa138        5 weeks ago         81.2MB
+rmartin@alpha:~$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+
+Al ser interactivos no aparecen como imágenes.
+1.5
+rmartin@zeta16:~/lagrs/practica01$
+Sending build context to Docker daemon  3.072kB
+Step 1/4 : FROM ubuntu:18.04
+ ---> cd6d8154f1e1
+Step 2/4 : RUN apt-get update && apt-get upgrade -y && apt-get install -y sysvbanner
+ ---> Using cache
+ ---> a6d9ab25b26c
+Step 3/4 : COPY entrypoint.sh /
+ ---> 08984e4f97d6
+Step 4/4 : ENTRYPOINT ["/entrypoint.sh"]
+ ---> Running in 38b73aff2b2b
+Removing intermediate container 38b73aff2b2b
+ ---> 57f58bf4d7cc
+Successfully built 57f58bf4d7cc
+Successfully tagged ralvarezmar/banner:latest
+rmartin@zeta16:~/lagrs/practica01$ docker run ralvarezmar/banner
+
+ #####      #    ######  #    #  #    #  ######  #    #     #    #####    ####
+ #    #     #    #       ##   #  #    #  #       ##   #     #    #    #  #    #
+ #####      #    #####   # #  #  #    #  #####   # #  #     #    #    #  #    #
+ #    #     #    #       #  # #  #    #  #       #  # #     #    #    #  #    #
+ #    #     #    #       #   ##   #  #   #       #   ##     #    #    #  #    #
+ #####      #    ######  #    #    ##    ######  #    #     #    #####    ####
+
+
+   ##
+  #  #
+ #    #
+ ######
+ #    #
+ #    #
+
+   #                    #######         #######          #####
+  ##     ######  #####  #    #   ###### #    #   #####  #     #  #####   ######
+ # #     #       #    #     #    #          #    #    # #     #  #    #  #
+   #     #####   #    #    #     #####     #     #    #  #####   #    #  #####
+   #     #       #    #   #      #        #      #    # #     #  #    #  #
+   #     #       #    #   #      #        #      #    # #     #  #    #  #
+ #####   #       #####    #      ######   #      #####   #####   #####   ######
+
+
+ Para hacer que ejecute una shell basta con añadir /bin/bash al final del entrypoint.sh.
+
+ Para subir la imagen:
+ rmartin@zeta16:~/lagrs/practica01$ docker push ralvarezmar/banner
+ The push refers to repository [docker.io/ralvarezmar/banner]
+ 584af0edc0da: Pushed
+ aa215495836b: Pushed
+ 8d7ea83e3c62: Mounted from library/ubuntu
+ 6a061ee02432: Mounted from library/ubuntu
+ f73b2816c52a: Mounted from library/ubuntu
+ 6267b420796f: Mounted from library/ubuntu
+ a30b835850bf: Mounted from library/ubuntu
+ latest: digest: sha256:0d98c1907ea31f3508a18ad01410fb20c6877c42b586fce68b996a2168a87f93 size: 1776
+
+
+
+1.6
+Después de crear los archivos solicitados ejecutamos:
+
+rmartin@zeta16:~/lagrs/cal$ ./construye.sh
+rmartin@zeta16:~/lagrs/cal$ ./lanza_rmarcal01.sh
+    October 2018
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+rmartin@zeta16:~/lagrs/cal$ ./lanza_rmarcal02.sh
+    October 2018
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+rmartin@zeta16:~/lagrs/cal$ docker images
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+rmartin/cal          latest              10f1edd74c0a        58 seconds ago      130MB
+
+rmartin@zeta16:~/lagrs/cal$ docker ps -a
+CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS                      PORTS               NAMES
+f7a39215df2a        rmartin/cal          "/entrypoint.sh"         3 seconds ago       Exited (0) 2 seconds ago                        rmarcal02
+403c4ca35f59        rmartin/cal          "/entrypoint.sh"         7 seconds ago       Exited (0) 6 seconds ago                        rmarcal01
+
+Aparece una única imagen con mi contenedor pero dos procesos distintos.
+
+
+1.7
+ Después de crear los ficheros Dockerfile, entrypoint hago la siguiente prueba para comprobar que el sistema de archivos es persistente:
+
+rmartin@beta02:~/lagrs/bind$ ./lanza_rmarbind01.sh
+root@rmarbind01:/# ls
+bin   dev            etc   lib    media  opt   root  sbin  sys  usr
+boot  entrypoint.sh  home  lib64  mnt    proc  run   srv   tmp  var
+root@rmarbind01:/# cd home
+root@rmarbind01:/home# ls
+rmartin
+root@rmarbind01:/home# cd rmartin
+root@rmarbind01:/home/rmartin# echo prueba >> hola.txt
+root@rmarbind01:/home/rmartin# ls
+hola.txt
+root@rmarbind01:/home/rmartin# cat hola.txt
+prueba
+root@rmarbind01:/home/rmartin# exit
+exit
+rmartin@beta02:~/lagrs/bind$ ./lanza_rmarbind01.sh
+root@rmarbind01:/# cat /home/rmartin/hola.txt
+prueba
+
+
+1.8
+Después de crear la máquina virtual con las especificaciones indicadas, cambiando el fichero /etc/cloud/cloud.cfg y cambiando preserve_hostname=true y después editando el fichero /etc/hostname, podemos cambiar el nombre del host.
+
+1.9
+Para crear el nuevo usuario:
+sudo adduser rmartin
+Y te pide una serie de datos como la contraseña, nombre completo de usuario o nombre de la sala.
+Añadimos el grupo admin:
+Una vez creado el usuario cambiamos al nuevo usuario con su - rmartin
+Cambiamos de nuevo a user para añadir el grupo admin y añadir el usuario rmartin a este grupo:
+groupadd admin
+sudo usermod -g admin rmartin
+
+Para poder instalar sshfs primero hay que actualizar la máquina con:
+sudo apt-get update
+sudo apt-get upgrade
+
+Hay que añadir los repositorios oficiales de ubuntu(en modo main, restricted, universe y multiverse) a /etc/apt/sources.list y, después de hacer otra vez update y upgrade, ya podemos instalar sshfs:
+sudo apt-get install sshfs
+
+Ya puedo lanzar sshfs:
+
+sudo sshfs -o nonempty rmartin@beta02.aulas.gsyc.urjc.es: /home/rmartin
+Pedirá contraseña y ya está mi home montado.
+Si lo he hecho con el usuario no me deja acceder a la carpeta, solo me deja acceder si hago sshfs como root.
+
+Ahora puedo hacer ping desde la máquina virtual y guardar su salida en mi home del laboratorio:
+ping 212.128.255.50 -c 3 >> /home/rmartin/ping.txt
+PING 212.128.255.50 (212.128.255.50) 56(84) bytes of data.
+64 bytes from 212.128.255.50: icmp_seq=1 ttl=63 time=2.00 ms
+64 bytes from 212.128.255.50: icmp_seq=2 ttl=63 time=0.683 ms
+64 bytes from 212.128.255.50: icmp_seq=3 ttl=63 time=0.618 ms
+
+--- 212.128.255.50 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2021ms
+rtt min/avg/max/mdev = 0.618/1.103/2.009/0.641 ms
+?
+Con el nuevo usuario no root realizo:
+sshfs -o nonempty rmartin@beta02.aulas.gsyc.urjc.es: /home/noroot/prueba
+
+Y me monta el directorio correctamente y me deja acceder normalmente.
+
+Para añadir la configuración de docker realizada en el home del laboratorio, me copio los ficheros de configuración almacenados en mi home (ubicados en .docker) y el script docker-lagrs para exportar las variables de entorno.
+Además, meto al usuario rmartin(de la máquina virtual) en el grupo docker.
+Para poder ejecutar docker images correctamente hay que cambiar de dueño de los ficheros al path $HOME/.docker/machine/machines/dockerserver.aulas.gsyc.urjc.es/
+Para ello: chown rmartin path/*
+
+Ahora puedo ejecutar docker images y aparecen todas las imagenes creadas en el servidor
+
+1.10
+rmartin@pc01: sudo docker run debian echo "holamundo"
+holamundo
+rmartin@pc01: sudo docker images
+Aparece una única imagen con mi contenedor holamundo creado previamente.
+
+1.11. Imágenes al insertar docker images:
+rmartin@pc01: docker images
+REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
+jluzon/caa            latest              40965e6ddf0d        41 seconds ago      296MB
+rmartin/caa           latest              ea6f5b22af73        15 minutes ago      287MB
+mortuno/cab           latest              5296ff2d934e        3 days ago          286MB
+<none>                <none>              75cb3f0b33ba        3 days ago          296MB
+acarmona/caa          latest              f45a2f7dcd51        3 days ago          296MB
+<none>                <none>              11ab8fa26e0c        3 days ago          296MB
+<none>                <none>              6f129ba3c036        3 days ago          296MB
+mortuno/caa           latest              f2b61280bb35        9 days ago          323MB
+jluzon/bind           latest              729e6af00a98        12 days ago         130MB
+<none>                <none>              fb348132f682        2 weeks ago         130MB
+aeworo/cal            latest              0c7320584839        2 weeks ago         156MB
+<none>                <none>              e6fcc8ee54cc        3 weeks ago         130MB
+alonsod29/cal         latest              089962dd3c92        3 weeks ago         130MB
+acarmona/bind         latest              96ba074c43e6        3 weeks ago         130MB
+alonsod29/banner      latest              153b930ab331        3 weeks ago         130MB
+<none>                <none>              cda132b90710        3 weeks ago         130MB
+acarmona/cal          latest              ff29fe0392f1        3 weeks ago         130MB
+jluzon/cal            latest              ff29fe0392f1        3 weeks ago         130MB
+<none>                <none>              d44c540dceba        3 weeks ago         130MB
+<none>                <none>              a918a6c21abf        3 weeks ago         130MB
+<none>                <none>              0d4091b0db88        3 weeks ago         130MB
+rmartin/bind          latest              95cf979fa33c        3 weeks ago         130MB
+alonsod29/bind        latest              6900ad67c4ea        3 weeks ago         130MB
+<none>                <none>              8b97182ab196        3 weeks ago         130MB
+jluzonlopez/banner    latest              7a4c6dbc92ff        3 weeks ago         130MB
+<none>                <none>              5510dc01853b        3 weeks ago         130MB
+<none>                <none>              5503be24c62c        3 weeks ago         130MB
+mortuno/bind          latest              7fad61db9216        4 weeks ago         130MB
+afcarmona/banner      latest              9091e33f8f80        4 weeks ago         130MB
+ralvarezmar/banner    latest              9091e33f8f80        4 weeks ago         130MB
+<none>                <none>              57f58bf4d7cc        4 weeks ago         130MB
+test/banner           latest              086d23ea442d        4 weeks ago         130MB
+<none>                <none>              eafa5fe719bc        4 weeks ago         130MB
+<none>                <none>              8bf97abde18c        4 weeks ago         117MB
+hola-mundo            latest              aebc4c0f2d9b        7 weeks ago         1.86kB
+hello-world           latest              4ab4c602aa5e        7 weeks ago         1.84kB
+ubuntu                16.04               b9e15a5d1e1a        7 weeks ago         115MB
+ubuntu                18.04               cd6d8154f1e1        7 weeks ago         84.1MB
+ubuntu                latest              cd6d8154f1e1        7 weeks ago         84.1MB
+nginx                 latest              06144b287844        7 weeks ago         109MB
+debian                latest              f2aae6ff5d89        7 weeks ago         101MB
+guacamole/guacd       latest              a01dd3dbdf0f        9 months ago        348MB
+guacamole/guacamole   latest              8b0c8cac76b2        9 months ago        516MB
+
+
+1.12.
+Después de crear los archivos correspondientes, lanzo el script que lo construye, lo lanzo y puedo hacer ping solo con el nombre de la máquina:
+
+rmartin@zeta16:~/lagrs/caa$ ./lanza_rmarcaa01.sh
+root@rmarcaa01:/# ping zeta02
+PING zeta02.aulas.gsyc.urjc.es (10.108.33.3) 56(84) bytes of data.
+64 bytes from zeta02.aulas.gsyc.urjc.es (10.108.33.3): icmp_seq=1 ttl=62 time=0.706 ms
+64 bytes from zeta02.aulas.gsyc.urjc.es (10.108.33.3): icmp_seq=2 ttl=62 time=0.552 ms
+
+Si lanzo el contenedor en la máquina virtual el ping se ejecuta de la misma manera.
+
+1.13.
+Creando los ficheros correspondientes, lanzo los dos contenedores y haciendo ifconfig averiguo su ip:
+root@rmarcab01:/# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.0.10  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:ac:11:00:0a  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@rmarcab01:/# ping -c 3 172.17.0.11
+PING 172.17.0.11 (172.17.0.11) 56(84) bytes of data.
+64 bytes from 172.17.0.11: icmp_seq=1 ttl=64 time=0.374 ms
+64 bytes from 172.17.0.11: icmp_seq=2 ttl=64 time=0.061 ms
+64 bytes from 172.17.0.11: icmp_seq=3 ttl=64 time=0.054 ms
+--- 172.17.0.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2030ms
+rtt min/avg/max/mdev = 0.054/0.163/0.374/0.149 ms
+
+rmartin@zeta16:~/lagrs/cab$ ./lanza_rmarcab02.sh
+root@rmarcab02:/# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.0.11  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:ac:11:00:0b  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+Para ssh:
+Creo un usuario en la máquina rmarcab01:
+root@rmarcab01:/# adduser prueba
+Adding user `prueba' ...
+Adding new group `prueba' (1001) ...
+Adding new user `prueba' (1001) with group `prueba' ...
+Creating home directory `/home/prueba' ...
+.
+.
+.
+
+Desde rmarcab02 hago ssh a esta máquina:
+root@rmarcab02:/# ssh prueba@172.17.0.10
+The authenticity of host '172.17.0.10 (172.17.0.10)' can't be established.
+ECDSA key fingerprint is SHA256:A2njexnZ8ZNhkplbu4OIwxqZM2C53LjicgMer8LucvA.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '172.17.0.10' (ECDSA) to the list of known hosts.
+prueba@172.17.0.10's password:
+Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-34-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+prueba@rmarcab01:~$
+
+Y ya tendría acceso por ssh a rmarcab01 desde rmarcab02.
