@@ -10,6 +10,7 @@ from optparse import OptionParser
 from datetime import datetime
 from telepot.loop import MessageLoop as ml
 import requests
+import json
 from apixu.client import ApixuClient, ApixuException
 
 
@@ -53,14 +54,26 @@ def getToken():
     file.close()
     return token
 
+def formatData(info):
+    message = []
+    message.append("temperatura: " + str(info['current']['temp_c']) + " ºC")
+    message.append("humedad: " + str(info['current']['humidity']))
+    message.append("nubes: " + str(info['current']['cloud']))
+    message.append("viento: " + str(info['current']['wind_kph']) + " km/h")
+    message.append("posibilidad de lluvia: " + str(info['current']['precip_in']) + " %")
+    message.append("dirección de viento: " + str(info['current']['wind_dir']))
+    message.append(info['current']['condition']['text'])
+    print message
+    return message
+
 def main():
     token = getToken()
     bot = telepot.Bot(token)
     info = getCurrentWeather()
-    print info
-    info = getNextDays()
-    print "Next days: " , info
-    # bot.sendMessage(ID_USUARIO,"Envia maquina " + machine + ": " + check)
+    message = formatData(info)
+    bot.sendMessage(ID_USUARIO,"Tiempo ahora mismo en " + info['location']['name'])
+    for data in message:
+        bot.sendMessage(ID_USUARIO,data)
 
 if __name__ == "__main__":
     main()
